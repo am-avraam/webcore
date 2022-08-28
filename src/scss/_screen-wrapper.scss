@@ -277,7 +277,7 @@
         height: 100%;
     
     &:active::before,
-    &:focus::before {          
+    &:focus-within::before {          
         content: url('../image/highlight.svg');
         position: absolute;  
         left: -16px;

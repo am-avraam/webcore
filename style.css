@@ -227,7 +227,7 @@
 .mobile-menu__link {
   width: 100%;
   height: 100%; }
-  .mobile-menu__link:active::before, .mobile-menu__link:focus::before {
+  .mobile-menu__link:active::before, .mobile-menu__link:focus-within::before {
     content: url(./static/highlight.svg);
     position: absolute;
     left: -16px;

@@ -55,7 +55,6 @@ btn.addEventListener('click', function() {
 
   for (let i = 0; i < hids.length; i++) {
   let element = hids[i]; 
-  console.log(element);
     element.classList.remove('showIt');
   }
     } else {  
@@ -95,7 +94,6 @@ btn2.addEventListener('click', function() {
 
   for (let i = 0; i < hids2.length; i++) {
   let element = hids2[i]; 
-  console.log(element);
     element.classList.remove('showIt2');
   }
     } else {  

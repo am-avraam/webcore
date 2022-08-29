@@ -1,48 +1,65 @@
+function hide(el, el2) {
+    el.classList.remove('visible');
+    el2.classList.remove('transformation');
+}
+
+function show(el, el2) {
+    el.classList.add('visible');
+    el2.classList.add('transformation');
+}
+
 
 const body = document.querySelector('body');
 let closeBtn = document.querySelector('.menu-header__burger');
 let modalWin = document.querySelector(".screen-wrapper");
 let openBurger = document.querySelector('.header__burger');
+let mobileMenu = document.getElementById('mobile-menu');
 
-// const timeout = 800;
 
 openBurger.addEventListener('click', function() {
-    modalWin.style.display = 'flex';
+    show(modalWin, mobileMenu);
     body.style.overflow = 'hidden';
 })
 
 closeBtn.addEventListener('click', function() {
-    modalWin.style.display = 'none';
+    hide(modalWin, mobileMenu);
     body.style.overflow = 'auto';
 })
 
 
 modalWin.addEventListener('click', function(event) {
     if (!event.target.closest('.menu-wrapper')) { 
-    modalWin.style.display = 'none'; }
+        hide(modalWin, mobileMenu);
+}
     body.style.overflow = 'auto';
 })
 
 document.addEventListener('keydown', function(event) {
     if (event.which === 27) {
-        modalWin.style.display = 'none';
+        hide(modalWin, mobileMenu);
         body.style.overflow = 'auto';
     }
 })
 
 
+
+
 const feedback = document.querySelectorAll('.header__profile');
 const chatBtn = document.querySelectorAll('.header__chat');
 const closeModalFirst = document.querySelector('.menu-header__burger-modal');
-const modalFirst = document.querySelector('.modal-first-wrapper');
+const modalFirst = document.getElementById('modalFirst');
+const modalWindowFirst = document.getElementById('modal-window-first')
+
+
 
 if (feedback.length > 0) {
     for (let i = 0; i < feedback.length; i++) {
         const el = feedback[i];
         el.addEventListener('click', function(evt) {
             evt.preventDefault();
-            modalWin.style.display = 'none';
-            modalFirst.style.display = 'flex';
+            hide(modalWin, mobileMenu);
+            show(modalFirst, modalWindowFirst);
+            // modalFirst.style.display = 'flex';
             body.style.overflow = 'hidden';
         })
     }
@@ -53,8 +70,9 @@ if (chatBtn.length > 0) {
         const el = chatBtn[i];
         el.addEventListener('click', function(evt) {
             evt.preventDefault();
-            modalWin.style.display = 'none';
-            modalFirst.style.display = 'flex';
+            hide(modalWin, mobileMenu);
+            // modalFirst.style.display = 'flex';
+            show(modalFirst, modalWindowFirst);
             body.style.overflow = 'hidden';
 
         })
@@ -63,19 +81,20 @@ if (chatBtn.length > 0) {
 
 modalFirst.addEventListener('click', function(event) {
     if (!event.target.closest('.modal-window')) { 
-        modalFirst.style.display = 'none'; }
+        hide(modalFirst, modalWindowFirst);
+    }
         body.style.overflow = 'auto';
 })
 
 document.addEventListener('keydown', function(event) {
     if (event.which === 27) {
-        modalFirst.style.display = 'none';
+        hide(modalFirst, modalWindowFirst);
         body.style.overflow = 'auto';
     }
 })
 
 closeModalFirst.addEventListener('click', function() {
-     modalFirst.style.display = 'none';
+    hide(modalFirst, modalWindowFirst);
      body.style.overflow = 'auto'; 
 })
 
@@ -85,15 +104,17 @@ closeModalFirst.addEventListener('click', function() {
 
 const callBtn = document.querySelectorAll('.header__call');
 const closeModalSecond = document.querySelectorAll('.menu-header__burger-modal')[1];
-const modalSecond = document.querySelector('#modalSecond');
+const modalSecond = document.getElementById('modalSecond');
+const modalWindowSecond = document.getElementById('modal-window-second');
+
 
 if (callBtn.length > 0) {
     for (let i = 0; i < callBtn.length; i++) {
         const el = callBtn[i];
         el.addEventListener('click', function(evt) {
             evt.preventDefault();
-            modalWin.style.display = 'none';
-            modalSecond.style.display = 'flex';
+            hide(modalWin, mobileMenu);
+            show(modalSecond, modalWindowSecond)
             body.style.overflow = 'hidden';
         })
     }
@@ -101,19 +122,19 @@ if (callBtn.length > 0) {
 
 modalSecond.addEventListener('click', function(event) {
     if (!event.target.closest('.modal-window')) { 
-        modalSecond.style.display = 'none';
+        hide(modalSecond, modalWindowSecond)
         body.style.overflow = 'auto';
      }
 })
 
 document.addEventListener('keydown', function(event) {
     if (event.which === 27) {
-        modalSecond.style.display = 'none';
+        hide(modalSecond, modalWindowSecond);
         body.style.overflow = 'auto';
     }
 })
 
 closeModalSecond.addEventListener('click', function() {
-     modalSecond.style.display = 'none';
+    hide(modalSecond, modalWindowSecond);
      body.style.overflow = 'auto'; 
 })

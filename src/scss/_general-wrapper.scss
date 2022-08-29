@@ -18,11 +18,14 @@ body {
 a   {
         text-decoration: none;
         color: #1B1C21;
+
     }
 
 .mobile-menu-aside {
     display: none;
     box-shadow: none;
+    border-left: 1px solid #d9fff5;
+    
 
     @media screen and (min-width: 1120px) {
         & .header__default {
@@ -128,8 +131,9 @@ a   {
 // .mobile-menu__item {
 // }
 
-// .mobile-menu__link {
-// }
+.mobile-menu__link:active {
+    color: #7e7e82;
+}
 
 // .mobile-menu__buttons {
 // }
@@ -246,6 +250,7 @@ align-items: center;
         position: relative;
         margin-right: 12px;
         top: -5px;
+        padding-left: 15px;
     }
 }
 
@@ -357,6 +362,10 @@ align-items: center;
         flex-wrap: wrap;
         line-height: 24px;
     }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 .main__navigation-item {
     flex-shrink: 0;
@@ -366,10 +375,17 @@ align-items: center;
 
     &:hover {
         background: #FFFFFF;
-        border: 2px solid #B8FFEC;
+        border: 2px solid #ff3e79;
         border-radius: 6px;
         
     }
+
+    &:active, &:focus-within {
+            background: #FFFFFF;
+            border: 2px solid #B8FFEC;
+            border-radius: 6px;
+            
+        }
 }
 
 .main__intro {
@@ -394,7 +410,7 @@ align-items: center;
 }
 .intro__about {
     @media screen and (min-width: 550px) {
-        width: 43.33%;
+        width: 50%;
     }
 
     @media screen and (min-width: 1440px) {
@@ -437,6 +453,8 @@ align-items: center;
 
 .intro__secondPar {
     display: none;
+    transition: all 0.5s ease 0s;
+    transform: perspective(0px) translate(0px, 0px) rotate(0deg);
 
     @media screen and (min-width: 768px) {
             display: block;
@@ -494,6 +512,8 @@ align-items: center;
 // }
 
 .intro__signboard {
+    width: 110%;
+
     @media screen and (min-width: 768px) {
         width: 50%;  
     }
@@ -508,10 +528,13 @@ align-items: center;
 .intro__image {
     position: relative;
     border-radius: 2px;
-    max-width: 440px;
+    // max-width: 440px;
+    width: 100%;
     right: 16px;
+    // margin-left: 16px;
 
     @media screen and (min-width: 550px) {
+        margin-left: 16px;
         width: 100%;
         height: 102%;
         left: 0px;
@@ -691,6 +714,7 @@ align-items: center;
         &.showIt2 {
             display: flex;
             width: 29.16%;
+            transition: all 0.5s ease 0s;
         }
     
         &.dumy-card-2 {
@@ -719,6 +743,8 @@ align-items: center;
             &.showIt2 {
                 display: flex;
                 width: 21.4%;
+                transition: all 0.5s ease 0s;
+
             }
 
             &.dumy-card-2 {
@@ -811,6 +837,12 @@ align-items: center;
     } 
 }
 
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin-right: 12px;
+    background: #B5B6BC;
+}
 // .slider-container-2 {   
 // }
 
@@ -850,6 +882,7 @@ align-items: center;
 
 .swiper-pagination-2 {
     padding-left: 56px;
+    text-align: center;
 }
 
 
@@ -944,12 +977,6 @@ align-items: center;
     }
 }
 
-.slider-container-3__service--description,
-.slider-container-3__service--header {
-    @media screen and (min-width: 1440px) {
-        width: 46.78%;
-    }
-}
 
 .slider-container-3__service--price {
     @media screen and (min-width: 768px) { 
@@ -957,12 +984,6 @@ align-items: center;
     }
 }
 
-.slider-container-3__service--price-value,
-.slider-container-3__service--price {
-    @media screen and (min-width: 1440px) {
-        width: 21.5%;
-    }
-}
 .slider-container-3__service--term {
     @media screen and (min-width: 768px) { 
         width: 14.03%;
@@ -1006,10 +1027,24 @@ align-items: center;
     
 }
 
+.slider-container-3__service--description,
+.slider-container-3__service--header {
+    @media screen and (min-width: 1440px) {
+        width: 46.78%;
+    }
+}
+
 .slider-container-3__service--price-value {
 
     @media screen and (min-width: 768px) {
         width: 12.78%;
+    }
+}
+
+.slider-container-3__service--price-value,
+.slider-container-3__service--price {
+    @media screen and (min-width: 1440px) {
+        width: 21.5%;
     }
 }
 
@@ -1109,7 +1144,10 @@ align-items: center;
     padding-top: 16px;
     line-height: 16px;
     font-size: 14px;
-    
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
 }
 
 .footer {

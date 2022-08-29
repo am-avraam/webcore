@@ -1,6 +1,6 @@
 .screen-wrapper {
     width: 100%;
-    height: 1024px;
+    height: 100vh;
     position: fixed;
     z-index: 11;
     display: flex;
@@ -27,9 +27,6 @@
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
     position: absolute;
     z-index: 11;
-    // transform: perspective(600px) translate(0px, -100%) rotate(180deg);
-    // visibility: hidden;
-    // opacity: 0;
 
 
     @media screen and (min-width: 321px) and (max-width: 767px) { 
@@ -169,11 +166,6 @@
     
 }
 
-// .menu-header__logo {
-// }
-
-// .btn {
-// }
 
 .menu-header__right {
     margin-left: 77px;
@@ -184,7 +176,7 @@
     }
 }
 
-.header__default {
+.header__default, .menu-header__default {
     height: 40px;
 
     @media screen and (min-width: 321px) and (max-width: 767px) {
@@ -203,16 +195,10 @@
     border-radius: 50%;
 }
 
-// .header__check {
-// }
-
-// .img-btn {
-// }
-
 .mobile-menu__navigation {
     top: -200%;   
     left: 0;
-    height: 100%;
+    height: 86.1%;
     width: 100%;
     max-width: 320px;
     padding-left: 16px;
@@ -251,7 +237,7 @@
     }
 
     @media screen and (min-width: 768px) and (min-height: 800px) {
-        margin-bottom: 268px;
+        margin-bottom: 260px;
 
         & li:not(:last-of-type) {
             margin-bottom: 22px;
@@ -281,7 +267,7 @@
         filter: drop-shadow(6px 6px 5px #80949F);
 
         &:not(.active)::before {
-        content: url('../image/highlight.svg');
+        content: url('../image/icons/highlight.svg');
         position: absolute;  
         left: -24px;
         top: -2px;
@@ -313,7 +299,7 @@
     
     &:active::before,
     &:focus-within::before {          
-        content: url('../image/highlight.svg');
+        content: url('../image/icons/highlight.svg');
         position: absolute;  
         left: -16px;
         top: -2px;
@@ -337,13 +323,6 @@
         height: 40px;
     }
 }
-// .header__hidden {
-// }
-
-// .header__call {
-// }
-// .header__chat {
-// }
 
 .header__profile {
     margin-right: 16px;
@@ -371,8 +350,9 @@
     letter-spacing: -0.6px;   
 }
 
-// .mobile-menu__language {
-// }
+.mobile-menu__language {
+    margin-bottom: 32px;
+}
 
 .mobile-menu__langvar {
     margin-right: 7px;
@@ -387,7 +367,7 @@
 
 .remain-screen {
     width: 100%;
-    height: 150%;
+    height: 100%;
     opacity: 0.96;
     background: #fff;
     position: absolute;

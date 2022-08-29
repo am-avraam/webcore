@@ -14,7 +14,6 @@ function mobileSlider() {
       mySwiper = new Swiper (slider, {
          slidesPerView: 1.25,
          spaceBetween: 16,
-         // slidesPerGroup: 2,
          loop: true,
          slideClass: 'card',
          pagination: {
@@ -42,9 +41,6 @@ window.addEventListener("resize", () => {
 
 
 
-//             ВТОРОЙ СЛАЙДЕР СЦУКА
-
-
 const dumy2 = document.querySelector('.dumy-card-2');
 const slider2 = document.querySelector(".slider-container-2");
 
@@ -59,7 +55,6 @@ function mobileSlider2() {
       mySecondSwiper = new Swiper (slider2, {
          slidesPerView: 1.25,
          spaceBetween: 16,
-         // slidesPerGroup: 2,
          loop: true,
          slideClass: 'card-2',
          pagination: {
@@ -88,15 +83,8 @@ window.addEventListener("resize", () => {
 
 
 
-// ТРЕТИЙ СЛАЙДЕР 
-
-
 
 const slider3 = document.querySelector(".slider-container-3");
-
-// if (window.innerWidth < 768) {
-//    dumy2.remove();
-// } 
 
 let myThirdSwiper;
 
@@ -105,7 +93,6 @@ function mobileSlider3() {
       myThirdSwiper = new Swiper (slider3, {
          slidesPerView: 1.19,
          spaceBetween: 16,
-         // slidesPerGroup: 2,
          loop: true,
          slideClass: 'card-3',
          pagination: {

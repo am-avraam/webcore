@@ -1,4 +1,3 @@
-// ДЛЯ ТЕКСТА О КОМПАНИИ
 
 let btnIntro = document.querySelector('.button-show-0');
 let secondPar = document.querySelector('.intro__secondPar');
@@ -34,11 +33,9 @@ btnIntro.addEventListener('click', function () {
 })
 
 
-// ДЛЯ ПЕРВОГО СЛАЙДЕРА
 
 
 let hids = document.querySelectorAll('.card:nth-child(n+7)');
-// console.log(hids);
 
 let btn = document.querySelector('.button-show');
 let btnSign = document.querySelector('.slider-container .button-show-sign');
@@ -48,7 +45,7 @@ let iconExtand = document.querySelector('.button-show-extend');
 
 btn.addEventListener('click', function() {
     if (showStatus.length > 1) {
-          // ниже для актива
+        
   btnSign.innerHTML = 'Показать все';
   btn.style.marginTop = '8px';
   iconExtand.style.transform = 'rotate(360deg)';
@@ -59,7 +56,6 @@ btn.addEventListener('click', function() {
   }
     } else {  
 
-      // ниже для неактива
     btnSign.innerHTML = 'Скрыть';
     btn.style.marginTop = '28px';
     btn.style.marginBottom = '34px';
@@ -74,7 +70,6 @@ btn.addEventListener('click', function() {
 })
 
 
-        // НИЖЕ ДЛЯ ВТОРОГО СЛАЙДЕРА
 
 
 let hids2 = document.querySelectorAll('.card-2:nth-child(n+4)');
@@ -87,7 +82,7 @@ let iconExtand2 = document.querySelector('.button-show-extend-2');
 
 btn2.addEventListener('click', function() {
     if (showStatus2.length > 1) {
-          // ниже для актива
+          
   btnSign2.innerHTML = 'Показать все';
   btn2.style.marginTop = '8px';
   iconExtand2.style.transform = 'rotate(360deg)';
@@ -98,7 +93,6 @@ btn2.addEventListener('click', function() {
   }
     } else {  
 
-      // ниже для неактива
     btnSign2.innerHTML = 'Скрыть';
     btn2.style.marginTop = '28px';
     btn2.style.marginBottom = '34px';

@@ -14,6 +14,7 @@ let closeBtn = document.querySelector('.menu-header__burger');
 let modalWin = document.querySelector(".screen-wrapper");
 let openBurger = document.querySelector('.header__burger');
 let mobileMenu = document.getElementById('mobile-menu');
+let mobMenuButtons = document.querySelector('.mobile-menu__buttons');
 
 
 openBurger.addEventListener('click', function() {
@@ -31,7 +32,9 @@ modalWin.addEventListener('click', function(event) {
     if (!event.target.closest('.menu-wrapper')) { 
         hide(modalWin, mobileMenu);
 }
-    body.style.overflow = 'auto';
+if (document.getElementsByClassName('modal-first-wrapper visible').length <= 0) {
+        body.style.overflow = 'auto';
+    }
 })
 
 document.addEventListener('keydown', function(event) {
@@ -59,7 +62,6 @@ if (feedback.length > 0) {
             evt.preventDefault();
             hide(modalWin, mobileMenu);
             show(modalFirst, modalWindowFirst);
-            // modalFirst.style.display = 'flex';
             body.style.overflow = 'hidden';
         })
     }
@@ -71,7 +73,6 @@ if (chatBtn.length > 0) {
         el.addEventListener('click', function(evt) {
             evt.preventDefault();
             hide(modalWin, mobileMenu);
-            // modalFirst.style.display = 'flex';
             show(modalFirst, modalWindowFirst);
             body.style.overflow = 'hidden';
 

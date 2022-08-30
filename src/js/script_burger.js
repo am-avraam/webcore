@@ -47,9 +47,9 @@ document.addEventListener('keydown', function(event) {
 
 
 
-const feedback = document.querySelectorAll('.header__profile');
-const chatBtn = document.querySelectorAll('.header__chat');
-const closeModalFirst = document.querySelector('.menu-header__burger-modal');
+const feedback = document.querySelectorAll('.profile');
+const chatBtn = document.querySelectorAll('.chat');
+const closeModalFirst = document.querySelector('.burger');
 const modalFirst = document.getElementById('modalFirst');
 const modalWindowFirst = document.getElementById('modal-window-first')
 
@@ -103,8 +103,8 @@ closeModalFirst.addEventListener('click', function() {
 
 
 
-const callBtn = document.querySelectorAll('.header__call');
-const closeModalSecond = document.querySelectorAll('.menu-header__burger-modal')[1];
+const callBtn = document.querySelectorAll('.call');
+const closeModalSecond = document.querySelectorAll('.burger')[1];
 const modalSecond = document.getElementById('modalSecond');
 const modalWindowSecond = document.getElementById('modal-window-second');
 

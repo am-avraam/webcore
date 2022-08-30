@@ -4,6 +4,7 @@
     position: fixed;
     z-index: 12;
     display: flex;
+    overflow: auto;
 
     visibility: hidden;
     opacity: 0;
@@ -33,7 +34,7 @@
     }
 }
 
-.menu-header__burger-modal {
+.modal-window__burger-modal {
     margin: 24px 16px 40px;
 
     @media screen and (min-width: 1440px) {
@@ -46,28 +47,26 @@
 
 }
 
-.main__header {
+.modal-window__header {
 
-    &.modal-window__header {
         color: $text-color;
         margin-bottom: 24px;
         padding-left: 16px;
-    }
+        
     
-    &.modal-window__header::before {
+    &::before {
         content: url('../image/icons/highlight.svg');
         position: relative;
         left: -16px;
+        background-color: #41F6D7;
     }
 
     @media screen and (min-width: 1440px) { 
-        &.modal-window__header {
             margin-bottom: 24px;
             padding-left: 16px;
             padding-top: 33px;
-        }
         
-        &.modal-window__header::before {
+        &::before {
             content: url('../image/icons/highlight.svg');
             position: relative;
             left: -16px;
